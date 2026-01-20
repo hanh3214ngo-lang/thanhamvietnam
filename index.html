@@ -24,14 +24,13 @@
         header {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                         url('https://cly.1cdn.vn/2023/06/15/danh-toc5.jpeg') no-repeat center/cover;
-            height: 50vh; 
+            height: 40vh; 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
             text-align: center;
-            background-attachment: fixed;
             border-bottom: 5px solid var(--accent-color);
         }
 
@@ -65,7 +64,6 @@
             margin-bottom: 35px;
             color: var(--primary-color);
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         .grid {
@@ -80,39 +78,24 @@
             border-radius: 15px;
             border-left: 5px solid var(--primary-color);
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(139, 0, 0, 0.1);
-            border-left-color: var(--accent-color);
-        }
-
-        .card h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            border-bottom: 1px dashed #eee;
-            padding-bottom: 5px;
-        }
-
+        /* KHUNG TRÌNH PHÁT NHẠC RÚT GỌN */
         .audio-player-container {
-            height: 48px;
+            height: 55px; /* Tăng nhẹ để hiện đủ thanh thời gian */
             overflow: hidden;
-            border-radius: 25px;
+            border-radius: 30px;
             margin-bottom: 15px;
             border: 1px solid #ddd;
-            background: #f1f1f1;
+            background: #000;
         }
 
         .audio-player-container iframe {
             width: 100%;
-            height: 200px;
-            margin-top: -130px;
+            height: 250px;
+            margin-top: -165px; /* Căn chỉnh lại để chỉ hiện thanh điều khiển */
             border: none;
         }
 
@@ -120,18 +103,15 @@
             font-size: 0.9rem;
             color: #555;
             text-align: justify;
-            margin: 0;
         }
 
         footer {
             background: #1a1a1a;
             color: #888;
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px;
             margin-top: 50px;
         }
-        
-        header h1 { font-size: 3rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); margin: 0; }
     </style>
 </head>
 <body>
@@ -139,172 +119,92 @@
 <nav>
     <a href="#instruments">Nhạc Cụ</a>
     <a href="#genres">Di Sản Âm Nhạc</a>
-    <a href="#footer">Liên Hệ</a>
 </nav>
 
 <header>
     <h1>THANH ÂM VIỆT NAM</h1>
-    <p>Lắng nghe hồn thiêng dân tộc qua các bản hòa tấu tiêu biểu</p>
+    <p>Di sản âm nhạc truyền thống trên nền tảng số</p>
 </header>
 
 <div class="container">
     <section id="instruments">
-        <h2>Hệ Thống Nhạc Cụ</h2>
+        <h2>Nhạc Cụ Dân Tộc</h2>
         <div class="grid">
             <div class="card">
                 <h3>Sáo Trúc</h3>
                 <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/V6X0_x6LgVs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/V6X0_x6LgVs" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay"></iframe>
                 </div>
-                <p>Bản hòa tấu sáo trúc mang âm hưởng làng quê Việt Nam thanh bình và trong trẻo.</p>
+                <p>Âm sắc trong trẻo, réo rắt của lũy tre làng Việt Nam.</p>
             </div>
-
             <div class="card">
                 <h3>Đàn Nguyệt</h3>
                 <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/Zg9hH_oUv_A" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/Zg9hH_oUv_A" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
-                <p>Độc tấu đàn Nguyệt với những ngón nhấn, luyến láy đặc trưng của dòng nhạc thính phòng cổ điển.</p>
+                <p>Nhạc cụ không thể thiếu trong hát Văn và Nhã nhạc Cung đình.</p>
             </div>
-
             <div class="card">
                 <h3>Đàn Bầu</h3>
                 <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/tC80z_18OqM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/tC80z_18OqM" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
-                <p>Tiếng đàn độc huyền cầm "vô tiền khoáng hậu", biểu đạt tâm tư sâu lắng của con người Việt.</p>
+                <p>Đàn độc huyền với âm thanh luyến láy như tiếng người nói.</p>
             </div>
-
             <div class="card">
                 <h3>Đàn T'rưng</h3>
                 <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/7O-o7K9T85k" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/7O-o7K9T85k" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
-                <p>Âm vang rộn ràng từ những ống nứa khô Tây Nguyên, mô phỏng tiếng suối reo chim hót.</p>
+                <p>Âm vang nứa tre từ đại ngàn Tây Nguyên hùng vĩ.</p>
             </div>
-
             <div class="card">
                 <h3>Khèn</h3>
                 <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/9X5E_h574Ww" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/9X5E_h574Ww" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
-                <p>Tiếng Khèn Mông giữa sương mù đại ngàn, bản nhạc gọi bạn tình đậm chất văn hóa vùng cao.</p>
+                <p>Tiếng gọi bạn tình và hồn thiêng của đồng bào vùng cao.</p>
             </div>
-
-            <div class="card">
-                <h3>Đàn Sến</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/3KqJm9hPj_g" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <p>Âm sắc mượt mà của Đàn Sến trong không gian âm nhạc tài tử Nam Bộ truyền thống.</p>
-            </div>
-
-            <div class="card">
-                <h3>Đàn Đáy</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/YpX4kHOfUaE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <p>Âm trầm đục đặc trưng hòa cùng tiếng phách tre, chỉ xuất hiện trong hát Ca Trù cổ.</p>
-            </div>
-
-            <div class="card">
-                <h3>Đàn Tam</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/SOfUunA4nS8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <p>Âm sắc khỏe khoắn, rộn ràng thường dùng trong dàn nhạc hòa tấu và nhạc lễ.</p>
-            </div>
-
             <div class="card">
                 <h3>Cồng Chiêng</h3>
                 <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/8Z_oU7eYp8Q" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/8Z_oU7eYp8Q" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
-                <p>Bản hòa tấu linh thiêng thể hiện sức mạnh của cộng đồng và các vị thần rừng núi.</p>
+                <p>Không gian văn hóa truyền thống đã được UNESCO công nhận.</p>
             </div>
         </div>
     </section>
 
-    <section id="genres" style="margin-top: 80px;">
+    <section id="genres" style="margin-top: 50px;">
         <h2>Di Sản Âm Nhạc</h2>
         <div class="grid">
             <div class="card">
                 <h3>Đờn Ca Tài Tử</h3>
                 <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/hIlyR-vD0_0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/hIlyR-vD0_0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
-                <p>Bản nhạc tài tử Nam Bộ với sự kết hợp của đàn Kìm, đàn Cò và đàn Tranh.</p>
+                <p>Nghệ thuật thính phòng dân gian đặc sắc của người dân Nam Bộ.</p>
             </div>
-
             <div class="card">
                 <h3>Quan Họ Bắc Ninh</h3>
                 <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/60Nn7k7k1kE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/60Nn7k7k1kE" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
-                <p>Làn điệu "Mời trầu" kinh điển, đại diện cho lòng hiếu khách của người Kinh Bắc.</p>
+                <p>Lối hát đối đáp nghĩa tình của người dân vùng Kinh Bắc.</p>
             </div>
-
-            <div class="card">
-                <h3>Hát Chèo</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/x8C0-6gC_7c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <p>Âm nhạc sân khấu Chèo với những nhịp phách tre rộn ràng đặc trưng Bắc Bộ.</p>
-            </div>
-
-            <div class="card">
-                <h3>Cải Lương</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/xX-m7zYv7hU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <p>Trích đoạn tân cổ giao duyên, sự kết hợp giữa nhạc tài tử và lời ca vọng cổ ngọt ngào.</p>
-            </div>
-
-            <div class="card">
-                <h3>Chầu Văn</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/S_8q0X3uN2w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <p>Tiết tấu nhanh, mạnh của hát văn trong nghi lễ hầu đồng đầy màu sắc huyền bí.</p>
-            </div>
-
             <div class="card">
                 <h3>Nhã Nhạc Cung Đình</h3>
                 <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/Xq-CPrH-7vI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/Xq-CPrH-7vI" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
-                <p>Hòa tấu đại nhạc triều đình Huế mang đậm không gian uy nghiêm và sang trọng.</p>
-            </div>
-
-            <div class="card">
-                <h3>Hát Xẩm</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/lA8I9U78n7U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <p>Tiếng hát kể chuyện đời của các nghệ nhân xẩm bên cây đàn Nhị và phách tre.</p>
-            </div>
-
-            <div class="card">
-                <h3>Ca Trù</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/kYc0uW-C52Y" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <p>Nghệ thuật hát ca trù với tiếng gõ phách tinh tế của đào nương và tiếng đàn đáy trầm mặc.</p>
-            </div>
-
-            <div class="card">
-                <h3>Hò và Lý</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/rV9902mU8e4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <p>Tổ hợp các điệu hò sông nước miền Tây Nam Bộ gắn liền với đời sống dân dã.</p>
+                <p>Âm nhạc bác học từ triều đại phong kiến Việt Nam.</p>
             </div>
         </div>
     </section>
 </div>
 
 <footer>
-    <p>&copy; 2026 Dự án Thanh Âm Việt Nam | Tôn vinh giá trị truyền thống.</p>
+    <p>&copy; 2026 - Thanh Âm Việt Nam. Dự án bảo tồn văn hóa số.</p>
 </footer>
 
 </body>
