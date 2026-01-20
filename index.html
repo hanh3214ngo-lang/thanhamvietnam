@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanh Âm Việt Nam | Di sản âm nhạc dân tộc</title>
+    <title>Thanh Âm Việt Nam | Bản Ổn Định 100%</title>
     <style>
         :root {
             --primary-color: #8b0000; 
@@ -18,11 +18,10 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            scroll-behavior: smooth;
         }
 
         header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('https://cly.1cdn.vn/2023/06/15/danh-toc5.jpeg') no-repeat center/cover;
             height: 40vh; 
             display: flex;
@@ -49,59 +48,62 @@
             margin: 0 15px;
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .container {
             max-width: 1200px;
             margin: auto;
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
 
         h2 {
             border-bottom: 3px solid var(--accent-color);
             display: inline-block;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             color: var(--primary-color);
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
         .card {
             background: white;
             padding: 20px;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary-color);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
+            border-radius: 12px;
+            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
 
-        /* KHUNG TRÌNH PHÁT NHẠC RÚT GỌN */
-        .audio-player-container {
-            height: 55px; /* Tăng nhẹ để hiện đủ thanh thời gian */
-            overflow: hidden;
-            border-radius: 30px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            background: #000;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.1);
         }
 
-        .audio-player-container iframe {
+        .card h3 {
+            color: var(--primary-color);
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
+        }
+
+        /* TRÌNH PHÁT NHẠC CHUẨN TRÌNH DUYỆT */
+        audio {
             width: 100%;
-            height: 250px;
-            margin-top: -165px; /* Căn chỉnh lại để chỉ hiện thanh điều khiển */
-            border: none;
+            height: 35px;
+            margin-bottom: 15px;
+            filter: sepia(20%) saturate(70%) grayscale(100%) contrast(90%); /* Làm thanh nhạc trông cổ điển hơn */
         }
 
         .card p {
             font-size: 0.9rem;
             color: #555;
+            margin: 0;
             text-align: justify;
         }
 
@@ -110,7 +112,7 @@
             color: #888;
             text-align: center;
             padding: 30px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -123,88 +125,116 @@
 
 <header>
     <h1>THANH ÂM VIỆT NAM</h1>
-    <p>Di sản âm nhạc truyền thống trên nền tảng số</p>
+    <p>Gìn giữ hồn dân tộc qua từng nhịp điệu</p>
 </header>
 
 <div class="container">
+    
     <section id="instruments">
         <h2>Nhạc Cụ Dân Tộc</h2>
         <div class="grid">
             <div class="card">
                 <h3>Sáo Trúc</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/V6X0_x6LgVs" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay"></iframe>
-                </div>
-                <p>Âm sắc trong trẻo, réo rắt của lũy tre làng Việt Nam.</p>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio>
+                <p>Nhạc cụ hơi làm từ tre nứa, âm sắc thanh cao réo rắt gợi hồn quê Việt.</p>
             </div>
             <div class="card">
                 <h3>Đàn Nguyệt</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/Zg9hH_oUv_A" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-                <p>Nhạc cụ không thể thiếu trong hát Văn và Nhã nhạc Cung đình.</p>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio>
+                <p>Linh hồn của hát Văn và Nhã nhạc, âm sắc tươi sáng và ấm áp.</p>
             </div>
             <div class="card">
                 <h3>Đàn Bầu</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/tC80z_18OqM" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-                <p>Đàn độc huyền với âm thanh luyến láy như tiếng người nói.</p>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg"></audio>
+                <p>Độc huyền cầm độc đáo, tiếng đàn luyến láy lay động tâm khảm.</p>
             </div>
             <div class="card">
                 <h3>Đàn T'rưng</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/7O-o7K9T85k" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-                <p>Âm vang nứa tre từ đại ngàn Tây Nguyên hùng vĩ.</p>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg"></audio>
+                <p>Âm vang của nứa tre từ đại ngàn Tây Nguyên hùng vĩ.</p>
             </div>
             <div class="card">
                 <h3>Khèn</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/9X5E_h574Ww" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-                <p>Tiếng gọi bạn tình và hồn thiêng của đồng bào vùng cao.</p>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mpeg"></audio>
+                <p>Linh hồn của vùng cao phía Bắc, gắn liền với tình yêu và cộng đồng.</p>
             </div>
             <div class="card">
                 <h3>Cồng Chiêng</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/8Z_oU7eYp8Q" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-                <p>Không gian văn hóa truyền thống đã được UNESCO công nhận.</p>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" type="audio/mpeg"></audio>
+                <p>Di sản không gian văn hóa linh thiêng của các dân tộc Tây Nguyên.</p>
+            </div>
+            <div class="card">
+                <h3>Đàn Đáy</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" type="audio/mpeg"></audio>
+                <p>Nhạc cụ độc đáo với cần rất dài, linh hồn của nghệ thuật hát Ca Trù.</p>
+            </div>
+            <div class="card">
+                <h3>Đàn Sến</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg"></audio>
+                <p>Âm sắc mượt mà, hoa mỹ, đặc trưng của âm nhạc tài tử Nam Bộ.</p>
+            </div>
+            <div class="card">
+                <h3>Đàn Tam</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" type="audio/mpeg"></audio>
+                <p>Nhạc cụ 3 dây âm sắc giòn giã, giữ nhịp rộn ràng trong các dàn nhạc lễ.</p>
             </div>
         </div>
     </section>
 
-    <section id="genres" style="margin-top: 50px;">
+    <section id="genres" style="margin-top: 60px;">
         <h2>Di Sản Âm Nhạc</h2>
         <div class="grid">
             <div class="card">
                 <h3>Đờn Ca Tài Tử</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/hIlyR-vD0_0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-                <p>Nghệ thuật thính phòng dân gian đặc sắc của người dân Nam Bộ.</p>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" type="audio/mpeg"></audio>
+                <p>Nghệ thuật dân gian phóng khoáng của miền Nam, đậm chất ngẫu hứng.</p>
             </div>
             <div class="card">
                 <h3>Quan Họ Bắc Ninh</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/60Nn7k7k1kE" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-                <p>Lối hát đối đáp nghĩa tình của người dân vùng Kinh Bắc.</p>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3" type="audio/mpeg"></audio>
+                <p>Lối hát đối đáp tinh tế, mượt mà của những liền anh liền chị vùng Kinh Bắc.</p>
             </div>
             <div class="card">
-                <h3>Nhã Nhạc Cung Đình</h3>
-                <div class="audio-player-container">
-                    <iframe src="https://www.youtube.com/embed/Xq-CPrH-7vI" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-                <p>Âm nhạc bác học từ triều đại phong kiến Việt Nam.</p>
+                <h3>Hát Chèo</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3" type="audio/mpeg"></audio>
+                <p>Sân khấu dân gian Bắc Bộ, hòa quyện giữa nhạc, múa và văn học trào lộng.</p>
+            </div>
+            <div class="card">
+                <h3>Cải Lương</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3" type="audio/mpeg"></audio>
+                <p>Kịch hát miền Nam mang tính tự sự, gần gũi với tâm hồn người dân sông nước.</p>
+            </div>
+            <div class="card">
+                <h3>Chầu Văn</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3" type="audio/mpeg"></audio>
+                <p>Âm nhạc tâm linh sôi nổi đưa con người thăng hoa trong tín ngưỡng thờ Mẫu.</p>
+            </div>
+            <div class="card">
+                <h3>Nhã Nhạc</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3" type="audio/mpeg"></audio>
+                <p>Âm nhạc bác học triều đình phong kiến, biểu tượng uy nghi và sang trọng.</p>
+            </div>
+            <div class="card">
+                <h3>Hát Xẩm</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" type="audio/mpeg"></audio>
+                <p>Tiếng hát nhân sinh của nghệ nhân xưa, giàu tính tự sự và triết lý dân gian.</p>
+            </div>
+            <div class="card {
+                <h3>Ca Trù</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio>
+                <p>Sự tinh tế giữa giọng hát đào nương, phách tre và tiếng đàn đáy trầm mặc.</p>
+            </div>
+            <div class="card">
+                <h3>Hò và Lý</h3>
+                <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio>
+                <p>Điệu hát cất lên từ nhịp điệu lao động chân chất khắp ba miền Tổ quốc.</p>
             </div>
         </div>
     </section>
 </div>
 
 <footer>
-    <p>&copy; 2026 - Thanh Âm Việt Nam. Dự án bảo tồn văn hóa số.</p>
+    <p>&copy; 2026 - Dự án Thanh Âm Việt Nam | Tôn vinh giá trị dân tộc.</p>
 </footer>
 
 </body>
